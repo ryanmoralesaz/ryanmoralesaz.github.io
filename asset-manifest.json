@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ryanmoralesaz/ryanmoralesaz.github.io/static/css/main.073c9b0a.css",
+    "main.js": "/ryanmoralesaz/ryanmoralesaz.github.io/static/js/main.b3f0e2ba.js",
+    "static/js/787.747e0fec.chunk.js": "/ryanmoralesaz/ryanmoralesaz.github.io/static/js/787.747e0fec.chunk.js",
+    "index.html": "/ryanmoralesaz/ryanmoralesaz.github.io/index.html",
+    "main.073c9b0a.css.map": "/ryanmoralesaz/ryanmoralesaz.github.io/static/css/main.073c9b0a.css.map",
+    "main.b3f0e2ba.js.map": "/ryanmoralesaz/ryanmoralesaz.github.io/static/js/main.b3f0e2ba.js.map",
+    "787.747e0fec.chunk.js.map": "/ryanmoralesaz/ryanmoralesaz.github.io/static/js/787.747e0fec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.b3f0e2ba.js"
+  ]
+}
