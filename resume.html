@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        background: gray;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        background-color: #f1f1f1;
+        border: 1px solid black;
+        width: 8.3in;
+        height: 11.7in;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .headingOne {
+        /* background-color: blue; */
+      }
+      .headingOneText {
+        /* font-weight: bold; */
+        color: white;
+        font-size: 24pt;
+      }
+      .left-side {
+        flex: 2;
+        height: 100%;
+        background: linear-gradient(0deg, royalblue, navy);
+      }
+      .right-side {
+        display: flex;
+        flex-direction: column;
+        flex: 5;
+        height: 100%;
+        background-color: white;
+        align-items: center;
+        /* justify-content: center; */
+      }
+      .ul-holder-1 {
+        display: flex;
+        flex-direction: row;
+        height: 12pt;
+        width: 100%;
+        background: gray;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .bullet-point {
+        width: 8pt;
+        height: 8pt;
+        background: linear-gradient(90deg, blue, gray);
+      }
+      .summary-view {
+        width: 95%;
+        margin-top: 8pt;
+        margin-bottom: 8pt;
+      }
+      .summary {
+        font-size: 10pt;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .section-view {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      .segment-holder {
+        display: flex;
+        flex-direction: row;
+      }
+      .segment-left {
+        display: flex;
+        flex: 1;
+        border: 1px solid black;
+      }
+      .segment-right {
+        display: flex;
+        flex: 3;
+        border: 1px solid black;
+      }
+      .category-one {
+        width: 95%;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid blue;
+      }
+      .category-one-text {
+        font-size: 20pt;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="flex-container">
+      <div class="left-side">
+        <div class="headingOne">
+          <text class="headingOneText">Ryan Morales</text>
+        </div>
+        <div class="headingTwoText">This is a heading two.</div>
+        <div class="headingThreeText">This is a heading three.</div>
+      </div>
+      <div class="right-side">
+        <div class="summary-view">
+          <Text class="summary"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet tempus diam, in imperdiet nisl malesuada non. In ac orci tincidunt, sagittis risus a, hendrerit justo. Praesent tempor condimentum leo, in volutpat purus aliquet ut. Pellentesque cursus purus sapien, in interdum
+            dolor elementum sed. Nam placerat risus enim, nec dapibus arcu mollis ac. Sed ultrices massa et nibh egestas, id vulputate mi porttitor. Ut scelerisque mauris eros, a rhoncus est euismod a. Pellentesque sed mi vitae risus tempor viverra a id dolor. Vivamus at tincidunt neque. Ut non
+            eleifend mauris, congue ultricies leo. Morbi nisi risus, pulvinar sed quam ac, viverra placerat dolor. Ut egestas nisi felis, nec sodales tellus euismod et. Vivamus sagittis lacus non nisl ullamcorper, ut gravida elit congue. Nulla congue finibus lectus, ultricies imperdiet quam accumsan
+            vitae. Nam elementum pharetra tristique.</Text
+          >
+        </div>
+        <div class="section-view">
+          <div class="category-one"><Text class="category-one-text">Experience</Text></div>
+        </div>
+        <div class="segment-holder">
+          <div class="segment-left"><text>one</text></div>
+          <div class="segment-right"><text>two</text></div>
+        </div>
+        <div class="ul-holder-1">
+          <div class="bullet-point"></div>
+          <div class="list-item">lorem ipsum lorem ipsum</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
