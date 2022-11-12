@@ -11,8 +11,8 @@ class Contact extends Component {
         }}
       >
         <h2 style={{ fontSize: "5vh" }}>Contact Ryan</h2>
-        <form action="https://formspree.io/ryanmoralesaz@gmail.com" method="post">
-          <fieldset style={{ textAlign: "left" }}>
+        <form action="https://formspree.io/ryanmoralesaz@gmail.com" style={styles.formWrapper} method="post">
+          <fieldset style={styles.fieldWrapper}>
             <legend>Email</legend>
 
             <label for="name">Name:</label>
@@ -33,3 +33,16 @@ class Contact extends Component {
 }
 
 export default Contact;
+
+const styles = {
+  formWrapper: {
+    // display: "flex",
+    // justifyContent: "center",
+    width: "80%",
+    textAlign: "left",
+    margin: "auto",
+  },
+  fieldWrapper: {
+    width: "90%",
+  },
+};

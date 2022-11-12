@@ -109,7 +109,7 @@ const styles = {
   },
   myName: {
     color: "white",
-    fontSize: "10vh",
+    fontSize: "10vw",
   },
   linkNav: {
     display: "flex",
@@ -135,6 +135,6 @@ const styles = {
   },
   linkWrapper: {
     // backgroundColor: "blue",
-    fontSize: "5vh",
+    fontSize: "5vw",
   },
 };

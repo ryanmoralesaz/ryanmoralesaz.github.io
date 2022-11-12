@@ -57,7 +57,7 @@ class QuoteAppInfo extends Component {
             </p>
             <Row className="m-auto w-75">
               <Col>
-                <CardImg src={quoteAppPng} />
+                <CardImg src={quoteAppPng} style={{ width: "80%" }} />
               </Col>
               <Col className="pb-5">
                 <a href="https://ryanmoralesaz.github.io/quote_generator/">
