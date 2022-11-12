@@ -13,6 +13,7 @@ import { FaPuzzlePiece } from "react-icons/fa";
 import { MdSwipe } from "react-icons/md";
 import { FaCat } from "react-icons/fa";
 import { personalInfo, knowledgeBase, hardSkills, softSkills, education, technicalTraining, experience } from "./data/resume_data";
+import signature from "./signature.PNG";
 import ReactToPrint from "react-to-print";
 
 /* #region size consts */
@@ -262,7 +263,6 @@ function Resume() {
                 }
               })}
             </text>
-            {/* <text style={{ textAlign: "left" }}>React Native, React, JS, HTML, CSS, Scratch, Adobe, Video Editing, Sound Editing, Gimp, Inkscape, CLI, Git</text> */}
           </div>
           <div style={styles.rightSide}>
             <div style={styles.summaryView}>
@@ -454,10 +454,3 @@ const styles = {
     fill: "url(#blue-gradient)",
   },
 };
-
-// headingOneText: {
-//   fontSize: "24pt",
-//   // marginBottom: ".1in",
-// },
-// headingTwoText: { textAlign: "left", fontSize: "16pt" },
-// headingThreeText: { textAlign: "left", alignSelf: "flex-start" },
