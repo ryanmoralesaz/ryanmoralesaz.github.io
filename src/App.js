@@ -1,12 +1,11 @@
 /* eslint-disable */
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, Link, useLocation } from "react-router-dom";
-import Entry from "./components/Entry";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Landing from "./components/Landing";
+
 import { Button, Container, Row, Col, CardImg, Card } from "reactstrap";
 import "./App.css";
 

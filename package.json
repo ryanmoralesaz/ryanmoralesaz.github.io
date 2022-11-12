@@ -13,6 +13,7 @@
     "react-icons": "^4.6.0",
     "react-modal": "^3.16.1",
     "react-scripts": "5.0.1",
+    "react-to-print": "^2.14.8",
     "reactjs-media": "^2.2.0",
     "reactstrap": "^9.1.5",
     "web-vitals": "^2.1.4"

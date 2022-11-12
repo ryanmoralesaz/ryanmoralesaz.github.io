@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { ImStarFull } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { RiBookReadFill } from "react-icons/ri";
@@ -13,6 +13,8 @@ import { FaPuzzlePiece } from "react-icons/fa";
 import { MdSwipe } from "react-icons/md";
 import { FaCat } from "react-icons/fa";
 import { personalInfo, knowledgeBase, hardSkills, softSkills, education, technicalTraining, experience } from "./data/resume_data";
+import ReactToPrint from "react-to-print";
+
 /* #region size consts */
 const sizeXs = "4pt";
 const sizeXs2 = "6pt";
@@ -47,7 +49,7 @@ const PersonalInfo = () => {
               ) : undefined}
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: sizeM }}>
-              <text style={{ lineHeight: 1.5 }}>{item.type}:</text>
+              <text style={{ lineheight: 1.2 }}>{item.type}:</text>
               <text>{item.content}</text>
             </div>
           </div>
@@ -66,7 +68,7 @@ const SoftSkills = () => {
               {item.type === "Problem Solving" ? <GiBrainstorm color="white" size={sizeL} /> : item.type === "Creativity" ? <AiOutlinePartition color="white" size={sizeL} /> : item.type === "Team Player" ? <RiTeamFill color="white" size={sizeL} /> : undefined}
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: sizeM }}>
-              <text style={{ lineHeight: 1.5 }}>{item.type}:</text>
+              <text style={{ lineheight: 1.2 }}>{item.type}:</text>
               <div style={{ flexDirection: "row", display: "flex" }}>
                 {[...Array(item.rating)].map(() => {
                   return <GoldStar size={sizeL} />;
@@ -89,7 +91,7 @@ const HardSkills = () => {
               {item.type === "Custom Components" ? <FaPuzzlePiece color="white" size={sizeL} /> : item.type === "RN App Development" ? <GiSmartphone color="white" size={sizeL} /> : item.type === "UX Design" ? <MdSwipe color="white" size={sizeL} /> : undefined}
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: sizeM }}>
-              <text style={{ lineHeight: 1.5 }}>{item.type}:</text>
+              <text style={{ lineheight: 1.2 }}>{item.type}:</text>
               <div style={{ flexDirection: "row", display: "flex" }}>
                 {[...Array(item.rating)].map(() => {
                   return <GoldStar size={sizeL} />;
@@ -121,7 +123,7 @@ const TechTraining = () => {
     <>
       {technicalTraining.map((item) => {
         return (
-          <div style={{ display: "flex", flexDirection: "row", width: "100%", marginBottom: sizeM }}>
+          <div style={{ display: "flex", flexDirection: "row", width: "100%", marginBottom: sizeXs }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flex: 1, padding: sizeS, textAlign: "left" }}>
               <text style={{ fontSize: sizeM }}>{item.dateRange}</text>
             </div>
@@ -177,7 +179,7 @@ const Experience = () => {
               </div>
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 3, textAlign: "left" }}>
                 <text style={{ display: "block", fontWeight: "bold", fontSize: sizeM2, textAlign: "left" }}>{item.title}</text>
-                <text style={{ fontSize: sizeS2, fontStyle: "italic", fontWeight: "bold" }}>{item.payCategory}</text>
+                {/* <text style={{ fontSize: sizeS2, fontStyle: "italic", fontWeight: "bold" }}>{item.payCategory}</text> */}
                 <text style={{ fontSize: sizeS2, fontStyle: "italic" }}>{item.domain1}</text>
                 <text style={{ fontSize: sizeS2 }}>{item.contentKnowledge}</text>
                 <text style={{ fontSize: sizeS2 }}>{item.employer}</text>
@@ -189,9 +191,11 @@ const Experience = () => {
               <>
                 {responsibilities.map((item) => {
                   return (
-                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", flex: 1, padding: sizeS, textAlign: "left", lineHeight: 1 }}>
+                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", flex: 1, padding: sizeS, textAlign: "left", lineheight: 1.2 }}>
                       <div style={styles.bulletPoint}></div>
-                      <text style={{ fontSize: sizeS2 }}>{item}</text>
+                      <div style={{ width: "90%" }}>
+                        <text style={{ fontSize: sizeS2 }}>{item}</text>
+                      </div>
                     </div>
                   );
                 })}
@@ -224,13 +228,16 @@ const print = () => {
   document.body.innerHTML = originalContents;
 };
 function Resume() {
+  let componentRef = useRef();
+
   return (
     <>
-      <button type="button" onClick={print}>
+      {/* <button type="button" onClick={print}>
         Print
-      </button>
+      </button> */}
+      <ReactToPrint trigger={() => <button>Print this out!</button>} content={() => componentRef} />
       <div id="printablediv">
-        <div style={styles.pageContainer}>
+        <div style={styles.pageContainer} ref={(el) => (componentRef = el)}>
           <div style={styles.leftSide}>
             <text style={{ fontSize: sizeX, marginBottom: sizeS }}>Ryan Morales</text>
             <text style={{ fontSize: sizeL, textAlign: "left" }}>
@@ -246,7 +253,7 @@ function Resume() {
             <LeftRibbonBar title="Hard Skills" />
             <HardSkills />
             <LeftRibbonBar title="Knowledge Base" />
-            <text style={{ textAlign: "left", lineHeight: 1.5 }}>
+            <text style={{ textAlign: "left", lineheight: 1.2 }}>
               {knowledgeBase.map((item, index) => {
                 if (index === knowledgeBase.length - 1) {
                   return `${item}`;
@@ -260,8 +267,8 @@ function Resume() {
           <div style={styles.rightSide}>
             <div style={styles.summaryView}>
               <text style={styles.summary}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet tempus diam, in imperdiet nisl malesuada non. In ac orci tincidunt, sagittis risus a, hendrerit justo. Praesent tempor condimentum leo, in volutpat purus aliquet ut. Pellentesque cursus purus sapien, in interdum
-                dolor elementum sed. Nam placerat risus enim, nec
+                Ryan Morales is a demonstrated problem solver with 10 years of experience in education, marketing, administration, & customer-service. He is currently seeking an opportunity to utilize his full-stack Web and React JS development skills in a junior to mid-level developer role with a
+                customer-oriented, modern technology company.
               </text>
             </div>
             <RightRibbonBar title="Experience" />
@@ -284,7 +291,7 @@ export default Resume;
 const styles = {
   pageContainer: {
     display: "flex",
-    margin: "1in",
+    // marginBottom: "1in",
     flexDirection: "row",
     backgroundColor: "#f1f1f1",
     // border: "1px solid white",
@@ -363,7 +370,7 @@ const styles = {
     paddingRight: ".2in",
     paddingLeft: ".2in",
     paddingTop: ".2in",
-    lineHeight: 1.3,
+    lineheight: 1.2,
   },
 
   summaryView: {
@@ -371,8 +378,8 @@ const styles = {
     justifyContent: "flex-start",
     alignContent: "flex-start",
     width: "95%",
-    marginTop: "8pt",
-    marginBottom: "8pt",
+    marginTop: "4pt",
+    marginBottom: "4pt",
   },
   summary: {
     textAlign: "start",
@@ -435,10 +442,11 @@ const styles = {
     color: "white",
   },
   bulletPoint: {
-    width: sizeXs,
-    height: sizeXs,
+    width: sizeS,
+    height: sizeS,
+
     background: "linear-gradient(90deg, blue, gray)",
-    marginRight: "8pt",
+    marginRight: sizeM,
   },
   listItem: {},
   goldStar: {

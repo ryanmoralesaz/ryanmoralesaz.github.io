@@ -125,7 +125,10 @@ export const experience = [
     contentKnowledge: "Business, Math, STEM, CTE, Spanish",
     employer: "Various School Districts",
     location: "[Phx, Tucson, Yuma, Whiteriver], Arizona; Las Vegas, NV",
-    responsibilities: ["teach 1 test responsibility", "teach 2 test responsiblity"],
+    responsibilities: [
+      "Instructed students, created lesson plans, assigned and corrected homework, managed classroom behavior, communicated with parents, collaborated with team teachers, helped students prepare for local, state and national tests and build 21st century skills for success in higher learning",
+      // "teach 2 test responsiblity",
+    ],
     notes: "List of all employers available upon request",
   },
   {
@@ -136,7 +139,9 @@ export const experience = [
     contentKnowledge: "STEM, Coding, Robotics, Math, Science",
     employer: "White River Unified School District",
     location: "Whiteriver, AZ",
-    responsibilities: ["stem test responsibility", "stem test responsiblity"],
+    responsibilities: [
+      "Coordinated implementation of digital tools and modern technology-oriented teaching strategies across the curriculum, ensured functional technology infrastructure through close collaboration with I.T. department, maintained and repaired hardware across campus, supported learning initiatives through sponsoring and coaching computer and robotics clubs.",
+    ],
     notes: null,
   },
 ];
