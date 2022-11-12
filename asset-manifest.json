@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.3389c5cb.css",
-    "main.js": "/static/js/main.9507657e.js",
+    "main.js": "/static/js/main.9156a454.js",
     "static/media/lvbjp_demo_video.mp4": "/static/media/lvbjp_demo_video.28a0e2f5ef708d2892cc.mp4",
     "static/media/scraper.gif": "/static/media/scraper.5f2f3a9702a14cd486ee.gif",
     "static/media/flickr-image.gif": "/static/media/flickr-image.0cb3e0127fb56a1c406e.gif",
     "static/media/interactive-form.gif": "/static/media/interactive-form.97b0756bb13a7417a121.gif",
     "static/media/employee-directory.gif": "/static/media/employee-directory.523678a97c0ca8a0b70a.gif",
+    "static/media/signature.PNG": "/static/media/signature.c8ffce4864817c3556d9.PNG",
     "static/media/tweeter.gif": "/static/media/tweeter.881f924197749de096f4.gif",
     "static/media/tictactoe.gif": "/static/media/tictactoe.b46308ce7e7e43373811.gif",
     "static/media/quote-generator-lg.gif": "/static/media/quote-generator-lg.4638a90f5d2ac14babb6.gif",
     "static/media/list-filter.gif": "/static/media/list-filter.91d68a2bd31aed5dc96d.gif",
     "index.html": "/index.html",
     "main.3389c5cb.css.map": "/static/css/main.3389c5cb.css.map",
-    "main.9507657e.js.map": "/static/js/main.9507657e.js.map"
+    "main.9156a454.js.map": "/static/js/main.9156a454.js.map"
   },
   "entrypoints": [
     "static/css/main.3389c5cb.css",
-    "static/js/main.9507657e.js"
+    "static/js/main.9156a454.js"
   ]
 }
